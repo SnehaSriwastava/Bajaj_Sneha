@@ -28,6 +28,12 @@ function errorResponse(msg){
     }
 }
 
+app.get("/",(req,res)=>{
+   res.json({
+      message:"Bajaj BFHL API is running"
+   });
+});
+
 app.get("/health",(req,res)=>{
     res.status(200).json({
         is_success:true,
